@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../css/contact.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Josefin+Slab:ital,wght@0,400;0,600;1,300;1,400;1,600&family=Muli:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css">
+    <!-- email send cdn -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+<body>
+    <div class="container">
+      <div class="hambugarMenu">
+        <div class="line line-1">
+
+        </div>
+        <div class="line line-2">
+
+        </div>
+        <div class="line line-3">
+
+        </div>
+    </div>
+    
+    <section class="sidebar">
+        <ul class="menu">
+            <li class="menu-item">
+                <a href="../index.html" class="menu-link" data-conten="Home">Home</a>
+            </li>
+            <li class="menu-item">
+                <a href="login.html" class="menu-link" data-conten="Report">Report</a>
+            </li>
+            <li class="menu-item">
+                <a href="registration.html" class="menu-link" data-conten="Registration">Registration</a>
+            </li>
+            <li class="menu-item">
+                <a href="team.html" class="menu-link" data-conten="Team">Team</a>
+            </li>
+            <li class="menu-item">
+                <a href="contact.html" class="menu-link" data-conten="Contact">Contact</a>
+            </li>
+        </ul>
+        <div class="social-media">
+            <a href="https://www.facebook.com/alamin.rony.1023"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.facebook.com/saimasshowrov/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/janjahangir.hossain/"><i class="fab fa-twitter"></i></a>
+        </div>
+    </section>
+        <section class="wrapper">
+            
+                <div class="content">
+                  <h1>CONTACT FORM</h1>
+                  <p>Connect with us by sending your views.</p>
+                </div>
+              
+                <div class="form">
+              
+                  <div class="top-form">
+                    <div class="inner-form">
+                      <div class="label">name</div>
+                      <input type="text" id="userName" placeholder="Name">
+                    </div>
+                    <div class="inner-form">
+                      <div class="label">email</div>
+                      <input type="text" id="userEmail" placeholder="Example@gmail.com">
+                    </div>
+                    <div class="inner-form">
+                      <div class="label">phone</div>
+                      <input type="text" id="userNumber" placeholder="+8801750349979">
+                    </div>
+                  </div>
+              
+                  <div class="middle-form">
+                    <div class="inner-form">
+                      <div class="label">subject</div>
+                      <input type="text" id="userSubject" placeholder="Subject">
+                    </div>
+                  </div>
+              
+                  <div class="bottom-form">
+                    <div class="inner-form">
+                      <div class="label">message</div>
+                      <textarea id="message" placeholder="Your message"></textarea>
+                    </div>
+                  </div>
+              
+                  <div id="btn" class="btn">send form</div>
+              
+                </div>
+              </div>
+              
+             
+              
+        </section>
+    </div>
+    <script >
+      // let userName = document.querySelectorAll('#userName').value;
+      // let userEmail = document.querySelectorAll('#userEmail').value;
+      // let userNumber = document.querySelectorAll('#userNumber').value;
+      // let userSubject = document.querySelectorAll('#userSubject').value;
+      // let message = document.querySelectorAll('#message').value;
+
+      let send = document.getElementById('btn');
+      send.addEventListener("click", () => {
+        let userName = document.querySelector('#userName').value;
+        let userEmail = document.querySelector('#userEmail').value;
+        let userNumber = document.querySelector('#userNumber').value;
+        let userSubject = document.querySelector('#userSubject').value;
+        let message = document.querySelector('#message').value;
+        console.log(userName);
+        console.log(userEmail);
+        console.log(userNumber);
+        console.log(userSubject);
+        console.log(message);
+        
+
+        sendEmail(userEmail, userSubject, userName, userNumber, message);
+          //console.log("send message");
+      });
+      
+      function sendEmail(userEmail, userSubject, userName, userNumber, message) {
+        Email.send({
+          Host: 'smtp.mailtrap.io',
+          Username : '04e12b6df6d6fb',
+          Password : '11c641d9f6d555',
+          To : 'alaminr270@gmail.com',
+          From : 'alaminr270@gmail.com',
+          Subject : `${userSubject} sent you a message`,
+          Body : `Name : ${userName}<br/>Email : ${userEmail}<br/>Phone Number : ${userNumber}<br/>Message : ${message}`,
+                  
+        })
+        .then(message =>{
+            //console.log (message);
+            if(message=='OK'){
+                alert(`Your mail has been send. 
+              Thank you for connecting.`);
+            }
+            else{
+              console.error (message);
+              alert('There is error at sending message. ')
+              
+            }
+
+          });
+
+			}
+    </script>
+    <script src="../index.js"></script>
+</body>
+</html>

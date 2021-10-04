@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/login.css">
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Josefin+Slab:ital,wght@0,400;0,600;1,300;1,400;1,600&family=Muli:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container">
+        
+        
+            <div class="hambugarMenu">
+                <div class="line line-1">
+        
+                </div>
+                <div class="line line-2">
+        
+                </div>
+                <div class="line line-3">
+        
+                </div>
+            </div>
+            
+            <section class="sidebar">
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="../index.html" class="menu-link" data-conten="Home">Home</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="login.html" class="menu-link" data-conten="Report">Report</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="registration.html" class="menu-link" data-conten="Registration">Registration</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="team.html" class="menu-link" data-conten="Team">Team</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="contact.html" class="menu-link" data-conten="Contact">Contact</a>
+                    </li>
+                </ul>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/alamin.rony.1023"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/saimasshowrov/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/janjahangir.hossain/"><i class="fab fa-twitter"></i></a>
+                </div>
+            </section>
+            <section class="wrapper">
+            
+                <div class="title">Login Form</div>
+                <form action="loginData.php" method="POST" >
+                    <div class="field">
+                        <input type="text" name="email" required>
+                        <label>Username or Email Address</label>
+                    </div>
+                    <div class="field">
+                        <input name="password" type="password" required>
+                        <label>Password</label>
+                    </div>
+                
+                    <div class="field">
+                        <input name="submit" type="submit" value="Login">
+                        
+                    </div>
+                    <div class="signup-link">
+                        Not a member? <a href="report.php">Signup now</a>
+                    </div>
+                </form>
+        </section>
+        
+    </div>
+    
+    
+    <script src="../index.js"></script>
+    
+</body>
+
+</html>

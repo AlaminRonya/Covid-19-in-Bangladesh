@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+.container{
+  max-width: 700px;
+  width: 100%;
+}
+
+.wrapper{
+  background: #171c24;
+  position: fixed;
+  width: 100%;
+  height: 10vh;
+  z-index: 100;
+  
+  
+
+}
+.content{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.content a{
+  font-size: 25px;
+  color: #fff;
+}
+.search-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.search-div input{
+  font-size: 15px;
+  border: none;
+  text-align: center;
+  background: #c29525;
+  color: #fff;
+}
+.search-div button{
+  font-size: 15px;
+  border: none;
+  background: #c29525;
+  color: #c29525;
+  padding: 0 5px;
+}
+
+table {
+  margin-top: 50px;
+  position: absolute;
+  top: 10%;
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #bdc3c7;
+  
+}
+
+/* tr {
+  
+  cursor: pointer;
+} */
+
+th,
+td {
+  padding: 12px;
+  text-align: center;
+  /* text-align: left; */
+  border-bottom: 1px solid #ddd;
+}
+/* tbody tr td{
+  text-align: center;
+} */
+table th{
+  background: #c29525;
+
+}
+
